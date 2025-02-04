@@ -5,36 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Captcha en JavaScript</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 250px; background-color: rgb(241, 237, 199);}
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            margin-top: 200px; 
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+        }
+
+        h2 {
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .captcha-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            margin: auto;
+        }
+
+        .captcha-box-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
         .captcha-box { 
             display: inline-block; 
-            padding: 10px; 
-            background: #e37777; 
+            padding: 12px; 
+            background: #ff6b6b; 
             font-size: 24px; 
             font-weight: bold; 
             letter-spacing: 3px;
-            margin-bottom: 10px;
+            color: white;
+            border-radius: 5px;
+            margin-right: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-        input, button { margin-top: 10px; padding: 8px; font-size: 16px; background: #83aac8; }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            font-size: 16px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 80%;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        #message {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 
     <h2>Vérification CAPTCHA</h2>
-    
-    <div class="captcha-box" id="captcha"></div>
-    <button onclick="genererCaptcha()">🔄</button> <br>
 
-    <input type="text" id="captchaInput" placeholder="Entrez la réponse">
-    <button onclick="verifierCaptcha()">Vérifier</button>
+    <div class="captcha-container">
+        <div class="captcha-box-container">
+            <div class="captcha-box" id="captcha"></div>
+            <button onclick="genererCaptcha()">🔄</button>
+        </div>
+        
+        <input type="text" id="captchaInput" placeholder="Entrez la réponse">
+        <button onclick="verifierCaptcha()">Vérifier</button>
 
-    <p id="message"></p>
+        <p id="message"></p>
+    </div>
 
     <script>
-        let captchaSolution; // Stockera la solution du CAPTCHA
+        let captchaSolution;
 
         function genererCaptcha() {
-            let type = Math.random() < 0.5 ? "texte" : "calcul"; // Choisir aléatoirement le type de CAPTCHA
+            let type = Math.random() < 0.5 ? "texte" : "calcul"; 
 
             if (type === "texte") {
                 let caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -42,14 +110,14 @@
                 for (let i = 0; i < 6; i++) {
                     captcha += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
                 }
-                captchaSolution = captcha; // Stocker la solution
+                captchaSolution = captcha; 
                 document.getElementById("captcha").textContent = captcha;
             } else {
                 let num1 = Math.floor(Math.random() * 10) + 1;
                 let num2 = Math.floor(Math.random() * 10) + 1;
                 let operations = ["+", "-", "*"];
                 let operation = operations[Math.floor(Math.random() * operations.length)];
-                captchaSolution = eval(num1 + operation + num2); // Calculer la réponse
+                captchaSolution = eval(num1 + operation + num2);
                 document.getElementById("captcha").textContent = `${num1} ${operation} ${num2} = ?`;
             }
 
@@ -64,7 +132,7 @@
                 document.getElementById("message").textContent = "✅ Correct ! Redirection en cours...";
                 document.getElementById("message").style.color = "green";
                 setTimeout(() => {
-                    window.location.href = "page_suivante.html"; // Remplace par l'URL souhaitée
+                    window.location.href = "page_suivante.html"; 
                 }, 3000);
             } else {
                 document.getElementById("message").textContent = "❌ Incorrect, essayez encore.";
