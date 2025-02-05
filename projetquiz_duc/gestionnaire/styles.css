@@ -1,0 +1,103 @@
+/* Style global de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Conteneur principal */
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Titres */
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Champs de saisie, boutons et listes déroulantes */
+input, button, select {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Champs de saisie et listes déroulantes */
+input, select {
+    width: 100%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Boutons */
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #218838;
+}
+
+/* Styles pour chaque quiz */
+.quiz-item {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+    text-align: left;
+}
+.quiz-item p {
+    margin: 5px 0;
+}
+
+/* Formulaire de modification du statut en ligne */
+.status-form {
+    display: inline;
+}
+
+/* Styles pour le formulaire d'édition d'un quiz */
+form {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Conteneur des questions */
+#questions-container {
+    margin-bottom: 20px;
+}
+
+/* Bloc de chaque question */
+.question-block {
+    background: #e9ecef;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Labels dans le bloc question */
+.question-block label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Champs de saisie dans le bloc question */
+.question-block input {
+    width: 100%;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
