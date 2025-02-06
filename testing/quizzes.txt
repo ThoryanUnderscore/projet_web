@@ -1,0 +1,3 @@
+quiz1;encours decriture;quiz_1.txt
+quiz2;encoursdecriture;quiz_2.txt
+quiz3;encoursdecriture;quiz_3.txt
