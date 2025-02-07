@@ -1,0 +1,4 @@
+1|tom|albert|tomalbert@gmail.com|$2y$10$jFrCZkK23Uuy61dhiA9WuuOAbuMOGnZeLNrTZpgvG7Ij8.3CE.KTK|user|1|non|1738763022
+2|Sauvaigo|Grégoire|sauvaigo@gmail.com|$2y$10$9lDoaYtwswRp4n/f7JGW7eWmMnscaclwQTzlwx4a2EPrKJsbUV2BW|school|1|oui|1738834004
+3|Villeret|Ugo|ugovilleret@gmail.com|$2y$10$hnOa4A2A3bOa55q2ixcTxuy1XpwoNamcGeNS1PCCg1RnoobS/DXlu|user|1|oui|1738871937
+4|Demaria|Matthieu|demaria@gamil.com|$2y$10$9hbz3kZ46c2ADUXzYVu0fumdZOQrHs877pT9rckCVnHE/Js/P/fbC|school|non|1738918180
