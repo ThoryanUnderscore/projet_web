@@ -1,1 +1,0 @@
-quiz2;ques1;choix1|choix2|choix3|choix4;choix4;ques2;choix1|choix2|choix3|choix4;choix3
