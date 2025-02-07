@@ -1,0 +1,3 @@
+1|tom|albert|tomalbert@gmail.com|$2y$10$jFrCZkK23Uuy61dhiA9WuuOAbuMOGnZeLNrTZpgvG7Ij8.3CE.KTK|user|non|1738763022
+2|Sauvaigo|Grégoire|sauvaigo@gmail.com|$2y$10$9lDoaYtwswRp4n/f7JGW7eWmMnscaclwQTzlwx4a2EPrKJsbUV2BW|school|non|1738834004
+3|asd|asds|aaa@gmail.com|$2y$10$IgLfqNH1YvQ.TFy7Hlmvj.iOhE9kPKC7YZq8jpJK6IysPmEToB.E.|user|non|1738889571
